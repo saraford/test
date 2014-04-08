@@ -1,0 +1,24 @@
+---
+title:           Special Directories
+created_at:      2009-12-17
+status:          Complete
+filter:
+  - erb
+  - maruku
+tags:
+  - powershell
+---
+<%= @page.title %>
+==================
+
+Special Directories are a set of directories, each of which has a
+function that will navigate you to the appropriate directory using
+the push-location cmdlet. For example, the function `home` might
+navigate to `c:\users\bdewey.`
+
+Install
+-------
+
+Copy the module to somewhere in `ENV:PSModulePath`. Then,
+
+    InstallModule SpecialDirectories

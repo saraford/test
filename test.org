@@ -13,7 +13,7 @@
 #+LINK_UP:   
 #+LINK_HOME: 
 
-Turns out there's more way to do code than just BEGIN_EXAMPLE. 
+Turns out there's more way to do code than just BEGIN_EXAMPLE, hopefully.
 
 * Inline examples
 

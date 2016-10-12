@@ -1,0 +1,5 @@
+behaviors:
+- on: issues.opened
+  then:
+    comment: "Hello, @{{ sender.login }}! Thanks for opening an issue. This is a demo of PRobot, a trainable robot that responds to activity on GitHub. Check out http://github.com/bkeepers/probot for more information."
+    label: "feedback"

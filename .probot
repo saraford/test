@@ -2,3 +2,8 @@ on issues.opened
 then comment("Hello, @{{ sender.login }}! Thanks for opening an issue. This is a demo of PRobot, a trainable robot that responds to activity on GitHub. Check out the config in [.probot.yml](https://github.com/bkeepers/test/blob/master/.probot.yml) and see http://github.com/bkeepers/probot for more information.")
 and label(feedback)
 and close;
+
+# Add WIP label if title contains WIP
+on pull_request.opened
+if @pull_request.title contains "WIP"
+then label(wip);

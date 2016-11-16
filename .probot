@@ -1,10 +1,10 @@
 on issues.opened
-if @issue.body contains "- [ ]"
+if @issue.body does not contain "- [x]"
 then comment("You did not fill out the issue template")
 and close;
 
-on issues.opened
-if @issue.body does not contain "- [ ]"
+on issues.opened or issues.updated
+if @issue.body contains "- [x]"
 then comment("Hello, @{{ sender.login }}! Thanks for opening an issue. This is a demo of PRobot, a trainable robot that responds to activity on GitHub. Check out the config in [.probot](https://github.com/bkeepers/test/blob/master/.probot) and see http://github.com/bkeepers/probot for more information.")
 and label("feedback");
 

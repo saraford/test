@@ -13,7 +13,7 @@ on("issues.opened")
 
 function filledOutIssueTemplate(event) {
   const body = event.payload.issue.body;
-  return !body.includes('- [ ]')
-    && body.includes('- [x]')
+  return !body.includes('* [ ]')
+    && body.includes('* [x]')
     && body.match(/### Steps to Reproduce/);
 }

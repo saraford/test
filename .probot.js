@@ -6,5 +6,5 @@ on('issues.opened')
         || !body.match(/### Steps to Reproduce/);
     })
   .comment('Hey @{{ sender.login }}, thanks for opening an issue, but you must fill out the template.')
-  .label('insufficient-info')
+  .label('invalid')
   .close();

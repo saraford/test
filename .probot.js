@@ -8,7 +8,7 @@ on('issues.opened')
 // Welcome new contributors
 on("issues.opened")
   .filter(filledOutIssueTemplate)
-  .comment("Hello, @{{ sender.login }}! Thanks for opening an issue. We will be in touch soon!")
+  .comment("Hey @{{ sender.login }}, thanks for opening an issue! We will be in touch soon.")
   .label("triage");
 
 function filledOutIssueTemplate(event) {

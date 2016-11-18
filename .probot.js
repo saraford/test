@@ -5,13 +5,7 @@ on("issues.opened")
 
 on("issues.opened")
   .filter(event => event.payload.issue.body.includes("- [x]"))
-  .comment(`
-    Hello, @{{ sender.login }}! Thanks for opening an issue. This is a
-    demo of PRobot, a trainable robot that responds to activity on GitHub.
-    Check out the config in
-    [.probot](https://github.com/bkeepers/test/blob/master/.probot) and
-    see http://github.com/bkeepers/probot for more information.
-  `)
+  .comment("Hello, @{{ sender.login }}! Thanks for opening an issue. This is a demo of PRobot, a trainable robot that responds to activity on GitHub. Check out the config in [.probot](https://github.com/bkeepers/test/blob/master/.probot) and see http://github.com/bkeepers/probot for more information.")
   .label("feedback");
 
 // Add WIP label if title contains WIP
